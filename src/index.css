@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', Helvetica, sans-serif;
+
+  --color-paper: #fbfbfa;
+  --color-ink: #1a1a1a;
+  --color-body: #3a3a36;
+  --color-mute: #8a8a84;
+  --color-line: #e4e4e0;
+
+  --animate-bob: bob 3s ease-in-out infinite;
+  --animate-shake: shake 0.45s ease-in-out;
+
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-8px);
+    }
+    50% {
+      transform: translateX(7px);
+    }
+    75% {
+      transform: translateX(-3px);
+    }
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+}
+
+img {
+  image-rendering: pixelated;
+}
